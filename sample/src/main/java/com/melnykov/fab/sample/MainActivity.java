@@ -24,6 +24,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.melnykov.fab.FloatingActionButton;
+import com.melnykov.fab.FloatingActionButtonWithCircularProgress;
 import com.melnykov.fab.ObservableScrollView;
 import com.melnykov.fab.ScrollDirectionListener;
 
@@ -147,8 +148,8 @@ public class MainActivity extends ActionBarActivity implements ActionBar.OnNavig
                 getResources().getStringArray(R.array.countries));
             list.setAdapter(listAdapter);
 
-            FloatingActionButton fab = (FloatingActionButton) root.findViewById(R.id.fab);
-            fab.attachToListView(list, new ScrollDirectionListener() {
+            FloatingActionButtonWithCircularProgress fab = (FloatingActionButtonWithCircularProgress) root.findViewById(R.id.fab);
+            fab.getFloatingActionButton().attachToListView(list, new ScrollDirectionListener() {
                 @Override
                 public void onScrollDown() {
                     Log.d("ListViewFragment", "onScrollDown()");

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <com.melnykov.fab.FloatingActionButton
+        android:id="@+id/internal_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        android:id="@+id/internal_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cpv_animAutostart="true"
+        app:cpv_indeterminate="true"
+        android:layout_alignRight="@id/internal_fab"
+        android:layout_alignLeft="@id/internal_fab"/>
+
+</RelativeLayout>
